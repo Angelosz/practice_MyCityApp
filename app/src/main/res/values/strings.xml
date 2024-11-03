@@ -24,4 +24,5 @@
     <string name="flour_description">Flour Description</string>
     <string name="bread">Bread</string>
     <string name="bread_description">Bread Description</string>
+    <string name="back_button">Back Button</string>
 </resources>
