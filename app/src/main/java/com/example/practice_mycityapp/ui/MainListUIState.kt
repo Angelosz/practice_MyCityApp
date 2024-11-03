@@ -6,7 +6,7 @@ import com.example.practice_mycityapp.utils.ContentType
 import com.example.practice_mycityapp.utils.View
 
 data class MainListUIState (
-    val selectedList: ContentType,
+    val contentType: ContentType,
     val selectedBuilding: Building,
     val selectedResource: Resource,
     val view: View

@@ -13,22 +13,13 @@ import kotlinx.coroutines.flow.update
 class MainListViewModel: ViewModel() {
     private val _uiState = MutableStateFlow(
         MainListUIState(
-            selectedList = ContentType.BUILDINGS,
+            contentType = ContentType.BUILDINGS,
             selectedBuilding = DataProvider.buildings[0],
             selectedResource = DataProvider.resources[0],
             view = View.LIST_VIEW
         )
     )
     val uiState: StateFlow<MainListUIState> = _uiState
-
-    fun resetUIState(){
-        _uiState.value = MainListUIState(
-            selectedList = ContentType.BUILDINGS,
-            selectedBuilding = DataProvider.buildings[0],
-            selectedResource = DataProvider.resources[0],
-            view = View.LIST_VIEW
-        )
-    }
 
     fun selectResource(id: Int){
         val resource = findResource(id) ?: DataProvider.resources[0]
@@ -61,8 +52,6 @@ class MainListViewModel: ViewModel() {
         return DataProvider.buildings.find { building -> building.id == id }
     }
 
-
-
     fun changeView(view: View){
         _uiState.update { currentState ->
             currentState.copy(
@@ -71,4 +60,11 @@ class MainListViewModel: ViewModel() {
         }
     }
 
+    fun changeSelectedContentType(contentType: ContentType){
+        _uiState.update { currentState ->
+            currentState.copy(
+                contentType = contentType
+            )
+        }
+    }
 }
