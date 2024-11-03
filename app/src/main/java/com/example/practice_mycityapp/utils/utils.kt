@@ -14,15 +14,15 @@ import androidx.compose.ui.res.painterResource
 import com.example.practice_mycityapp.R
 
 @Composable
-fun GoldCoinText(amount: Int, modifier: Modifier = Modifier){
+fun GoldCoinText(modifier: Modifier = Modifier, amount: Int, textBeforeAmount: String = "",){
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Text(
-            text = amount.toString(),
+            text = "$textBeforeAmount $amount",
             style = MaterialTheme.typography.headlineSmall,
-            modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_medium)),
+            modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_small)),
         )
         Image(
             painter = painterResource(R.drawable.goldcoin),
