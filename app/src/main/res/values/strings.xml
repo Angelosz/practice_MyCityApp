@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">practice_MyCityApp</string>
+    <string name="forest">Forest</string>
+    <string name="forest_description">Forest description</string>
+    <string name="sawmill">Sawmill</string>
+    <string name="sawmill_description">Sawmill description</string>
+    <string name="carpentry">Carpentry</string>
+    <string name="carpentry_description">Carpentry description</string>
+    <string name="wheat_field">Wheat Field</string>
+    <string name="wheat_field_description">Wheat Field description</string>
+    <string name="windmill">Windmill</string>
+    <string name="windmill_description">Windmill description</string>
+    <string name="bakery">Bakery</string>
+    <string name="bakery_description">Bakery description</string>
+    <string name="tree">Tree</string>
+    <string name="tree_description">Tree Description</string>
+    <string name="wood_trunk">Wood Trunk</string>
+    <string name="wood_trunk_description">Wood Trunk Description</string>
+    <string name="wood_plank">Wood Plank</string>
+    <string name="wood_plank_description">Wood Plank Description</string>
+    <string name="wheat">Wheat</string>
+    <string name="wheat_description">Wheat Description</string>
+    <string name="flour">Flour</string>
+    <string name="flour_description">Flour Description</string>
+    <string name="bread">Bread</string>
+    <string name="bread_description">Bread Description</string>
 </resources>
