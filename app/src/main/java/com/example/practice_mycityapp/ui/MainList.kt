@@ -19,16 +19,18 @@ import com.example.practice_mycityapp.ui.theme.Practice_MyCityAppTheme
 fun MainList(
     buildings: List<Building>,
     resources: List<Resource>,
-    onBuildingCardClicked: () -> Unit,
-    onResourceCardClicked: () -> Unit,
+    onBuildingCardClicked: (Int) -> Unit,
+    onResourceCardClicked: (Int) -> Unit,
     modifier: Modifier = Modifier
 ){
-    LazyColumn(modifier = modifier.padding(dimensionResource(R.dimen.padding_small))) {
+    LazyColumn(modifier = modifier
+        .padding(dimensionResource(R.dimen.padding_small))
+    ) {
         items(buildings) { building ->
             BuildingListCard(building, onBuildingCardClicked)
         }
         items(resources) { resource ->
-            ResourceListCard(resource, onResourceCardClicked)
+            ResourceListCard(resource, onResourceCardClicked )
         }
     }
 }
@@ -41,7 +43,7 @@ fun MainListPreview(){
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
             MainList(
                 DataProvider.buildings,
-                DataProvider.resources,
+                listOf<Resource>(),
                 {},{},
                 Modifier.padding(innerPadding)
             )
