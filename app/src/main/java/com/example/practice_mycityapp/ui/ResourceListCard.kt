@@ -26,14 +26,14 @@ import com.example.practice_mycityapp.ui.theme.Practice_MyCityAppTheme
 @Composable
 fun ResourceListCard(
     resource: Resource,
-    onClick: () -> Unit,
+    onClick: (Int) -> Unit,
     modifier: Modifier = Modifier
 ){
     Card(modifier = modifier
         .padding(dimensionResource(R.dimen.padding_small))
         .shadow(1.dp, MaterialTheme.shapes.medium)
         .fillMaxWidth(),
-        onClick = onClick
+        onClick = { onClick(resource.id) }
     ) {
         Row(modifier = Modifier
             .widthIn(min = 250.dp)
